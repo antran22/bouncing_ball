@@ -29,7 +29,10 @@ class vector (object):
         return (self.x, self.y)
 
     def randomize(self, speed):
-        self.x = random.randrange(-speed, speed + 1)
+        g = 0
+        while g == 0:
+            g = random.randrange(-speed, speed + 1) 
+        self.x = g
         self.y = round(math.sqrt(speed * speed - self.x * self.x))
         neg = random.randint (0, 1)
         if neg:
