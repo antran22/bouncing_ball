@@ -4,9 +4,9 @@ import random
 
 import pygame
 
-from packages.ball.ball import Ball
-from packages.env_var.env_var import *
-from packages.geometry import vector
+from .packages.ball.ball import Ball
+from .packages.env_var.env_var import *
+from .packages.geometry import vector
 
 pygame.init()
 font = pygame.font.SysFont('Consolas', 50)
