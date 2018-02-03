@@ -4,13 +4,14 @@ import random
 
 import pygame
 
-from .packages.ball.ball import Ball
-from .packages.env_var.env_var import *
-from .packages.geometry import vector
+from packages.ball.ball import Ball
+from packages.env_var.env_var import *
+from packages.geometry import vector
 
 pygame.init()
 font = pygame.font.SysFont('Consolas', 50)
 screen = pygame.display.set_mode(screen_size, 0)
+pygame.display.toggle_fullscreen()
 pygame.display.set_caption('Game')
 screen.fill(background)
 pygame.display.update()
@@ -55,7 +56,9 @@ while still_playing:
                     session = False
                     time_taken = time.time() - start_time
                     display_score(time_taken)
-
+                elif (ord(c) == 27):
+                    pygame.quit ()
+                    sys.exit()
         else:
             current_time = time.time()
             if current_time - last_move_time >= delay:
