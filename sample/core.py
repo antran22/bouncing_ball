@@ -4,9 +4,9 @@ import random
 
 import pygame
 
-from packages.ball.ball import Ball
-from packages.env_var.env_var import *
-from packages.geometry import vector
+from .packages.ball.ball import Ball
+from .packages.env_var.env_var import *
+from .packages.geometry import vector
 
 pygame.init()
 font = pygame.font.SysFont('Consolas', 50)
@@ -17,8 +17,8 @@ pygame.display.update()
 sw, sh = screen.get_width(), screen.get_height()
 
 still_playing = True
-speed = 15
-delay = 0.03
+speed = 3
+delay = 0.001
 random_delay = False
 
 
@@ -66,12 +66,10 @@ while still_playing:
                 last_random_time = current_time
                 ball1.randomize_step (speed)
 
-    if speed < 15:
+    if speed < 10:
         speed = speed + 1
     else:
         if not random_delay:
             random_delay = 5
         elif random_delay > 2:
             random_delay = random_delay * 0.8
-        if delay > 0.001:
-            delay = delay * 0.8

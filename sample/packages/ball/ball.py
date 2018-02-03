@@ -11,7 +11,7 @@ class Ball (object):
         self.text = chr(random.randrange(ord('A'), ord('Z')))
         pygame.init()
         self.color = ball_color
-        self.font = pygame.font.SysFont('Consolas', text_size)
+        self.font = pygame.font.SysFont('Arial', text_size)
 
     def randomize_step(self, speed):
         move_vector = vector.vector(randspeed=speed)

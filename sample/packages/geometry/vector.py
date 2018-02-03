@@ -31,7 +31,7 @@ class vector (object):
     def randomize(self, speed):
         g = 0
         while g == 0:
-            g = random.randrange(-speed, speed + 1) 
+            g = random.randrange(- speed + 1, speed) 
         self.x = g
         self.y = round(math.sqrt(speed * speed - self.x * self.x))
         neg = random.randint (0, 1)

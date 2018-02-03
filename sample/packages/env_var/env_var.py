@@ -12,9 +12,9 @@ colors = {
 }
 screen_size = (0, 0)
 background = colors['darkgray']
-radius = 30
+radius = 50
 ball_color = colors['orange']
 text_color = colors['white']
-text_size = 30
+text_size = 50
 text_recal = (8, 11)
 rebound_range = 50
